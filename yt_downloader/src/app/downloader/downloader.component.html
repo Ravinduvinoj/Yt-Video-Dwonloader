@@ -1,0 +1,24 @@
+<div class="container">
+  <h2 class="title">YouTube Video Downloader</h2>
+
+  <div class="input-container">
+    <input
+      type="text"
+      [(ngModel)]="youtubeUrl"
+      placeholder="Paste YouTube URL here..."
+      class="input-field"
+    />
+    <button
+      (click)="downloadVideo()"
+      [disabled]="!isValidYouTubeUrl() || isLoading"
+      class="download-button"
+    >
+      <span *ngIf="isLoading" class="loading-spinner">
+        <img src="../../assets/loading/66.gif" alt="Loading" />
+      </span>
+      <span *ngIf="!isLoading">Download</span>
+    </button>
+  </div>
+
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+</div>

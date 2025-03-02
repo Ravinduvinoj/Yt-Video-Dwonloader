@@ -1,0 +1,85 @@
+/* Main container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Heading styling */
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Input and Button container styling */
+.input-container {
+  width: 100%;
+  max-width: 448px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Input field styling */
+.input-field {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  flex-grow: 1;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.input-field:focus {
+  border-color: #3b82f6;
+}
+
+/* Button styling */
+/* Button styling */
+.download-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  width: 150px; /* Fixed width */
+  height: 40px; /* Fixed height */
+}
+
+/* Loading spinner styling */
+.loading-spinner img {
+  width: 35px; /* Fixed size for the spinner */
+  height: 35px;
+  margin-top: 5px;
+  margin-right: 8px; /* Add space between spinner and text */
+}
+
+/* Make sure the button text and spinner stay aligned */
+.download-button span {
+  display: inline-block;
+}
+
+/* Disabled button styling */
+.download-button:disabled {
+  background-color: #add4eb;
+  cursor: not-allowed;
+}
+
+.download-button span {
+  display: inline-block;
+}
+
+/* Error message styling */
+.error-message {
+  color: #ef4444;
+  margin-top: 0.5rem;
+}
